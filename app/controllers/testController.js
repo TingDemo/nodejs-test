@@ -75,6 +75,7 @@ class testController {
             return res.status(400).json({err:err.details[0].message});
         }
 
+        //更新user
         let testServicesObj = new testServices();
         let result = await testServicesObj.updateUser(new testUpdateDto(req.body));
 
@@ -98,6 +99,7 @@ class testController {
             return res.status(400).json({err:err.details[0].message});
         }
 
+        //刪除user
         let testServicesObj = new testServices();
         let result = await testServicesObj.deleteUser(new testDto(req.params));
 
